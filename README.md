@@ -12,4 +12,4 @@ it was challenging to bring the output as expected.but somwhow i was succefully 
 And this is not suitable for handling huge number of values , because need to work in script according to the number of values we are hanndling.
 this method will be helpfull when we are handling multiple typical set of values or small number of value.
 In my case i used Typical set of values ,
-around 40 Energy meter with typically 2 values (POWER,ENERGY)
+around 40 Energy meter with typically 2 values (POWER,ENERGY), additionally TImestamp and status.
