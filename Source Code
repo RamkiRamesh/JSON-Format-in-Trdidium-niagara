@@ -1,0 +1,72 @@
+/* Auto-generated ProgramImpl Code */
+
+import java.util.*;              /* java Predefined*/
+import javax.baja.nre.util.*;    /* nre Predefined*/
+import javax.baja.sys.*;         /* baja Predefined*/
+import javax.baja.status.*;      /* baja Predefined*/
+import javax.baja.util.*;        /* baja Predefined*/
+import com.tridium.program.*;    /* program-rt Predefined*/
+
+public class ProgramImpl
+  extends com.tridium.program.ProgramBase
+{
+
+////////////////////////////////////////////////////////////////
+// Getters
+////////////////////////////////////////////////////////////////
+
+  public BStatusString getTimeStamp() { return (BStatusString)get("TimeStamp"); }
+  public BStatusString getOut() { return (BStatusString)get("Out"); }
+  public BStatusString getPower() { return (BStatusString)get("Power"); }
+  public BStatusString getEnergy() { return (BStatusString)get("Energy"); }
+  public BStatusBoolean getOperational() { return (BStatusBoolean)get("Operational"); }
+
+////////////////////////////////////////////////////////////////
+// Setters
+////////////////////////////////////////////////////////////////
+
+  public void setTimeStamp(javax.baja.status.BStatusString v) { set("TimeStamp", v); }
+  public void setOut(javax.baja.status.BStatusString v) { set("Out", v); }
+  public void setPower(javax.baja.status.BStatusString v) { set("Power", v); }
+  public void setEnergy(javax.baja.status.BStatusString v) { set("Energy", v); }
+  public void setOperational(javax.baja.status.BStatusBoolean v) { set("Operational", v); }
+
+////////////////////////////////////////////////////////////////
+// Program Source
+////////////////////////////////////////////////////////////////
+
+  public void onStart() throws Exception
+  {
+    // start up code here
+  }
+  
+  public void onExecute() throws Exception
+  {
+  /////////////////////RAMKI_RAMESH/////////////////////////////11/03/2024///////////////////////
+    BStatusString Timestamp = getTimeStamp();
+    BStatusString Energy = getEnergy();
+    BStatusString Power = getPower();
+    BStatusString Out = getOut();
+    BStatusBoolean Operational = getOperational();
+    String A1="{";
+    String A2="\"timestamp\":";
+    String X="\""+Timestamp.getValue()+"\",";
+    String K2="\"operational\":";
+    String K3="\""+Operational.getValue()+"\",";
+    String A3="\"ACTIVE_ENERGY\":";
+    String Y="\""+Energy.getValue()+"\",";
+    String A4="\"ACTIVE_POWER\":";
+    String Z="\""+Power.getValue()+"\"";
+    String A=A1+A2+X+K2+K3+A3+Y+A4+Z+"}";
+    Out.setValue(A);
+  }
+  
+  public void onStop() throws Exception
+  {
+    // shutdown code here
+  }
+  
+  
+  /////////////////////RAMKI_RAMESH/////////////////////////////11/03/2024///////////////////////
+  
+}
